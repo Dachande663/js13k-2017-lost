@@ -162,6 +162,7 @@
 
 
 	// Go!
+	flavicon();
 	tick();
 	var hash = W.location.hash;
 	var startingAction = (hash.length > 1) ? hash.substr(1) : "main";
@@ -387,6 +388,29 @@
 			}
 		}
 		return maxWidth;
+	}
+
+
+	// Set favicon
+	function flavicon() {
+
+		var canvas = document.createElement("canvas");
+		canvas.width = canvas.height = 16;
+		var ctx = canvas.getContext("2d");
+
+		ctx.fillStyle = "#6c977f";
+		ctx.fillRect(0, 0, 16, 16);
+		ctx.fillStyle = "#ffce45";
+		ctx.beginPath();
+		ctx.arc(8, 8, 3, 0, PI2);
+		ctx.fill();
+
+		var link  = document.createElement('link');
+		link.type = "image/x-icon";
+		link.rel  = "shortcut icon";
+		link.href = canvas.toDataURL("image/x-icon");
+		document.getElementsByTagName('head')[0].appendChild(link);
+
 	}
 
 
