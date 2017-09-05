@@ -29,6 +29,13 @@ All of the source is available in this repo. Feel free to play and tweak it to y
 
 ## Build
 
-Minify the JS and HTML and you're done. Nothing fancy here.
+The build is pretty simple. Minify the JS, minify the HTML, zip. There's a bash script that does it all.
 
-`uglifyjs -c -m -o app.min.js app.js`
+`./build.sh`
+
+You'll need uglify-js and html-minifier from npm to run it.
+
+`npm install uglify-js -g`
+
+`npm install html-minifier -g`
+
