@@ -27,6 +27,13 @@ There are two parts to the game:
 All of the source is available in this repo. Feel free to play and tweak it to your hearts content. All code is released under the MIT License.
 
 
+## Testing
+
+It's a game written in a few hours for a 13KB competition. There are no tests.
+
+If you want to test the script though, you can access any point in the script via anchor e.g. index.html#a5.
+
+
 ## Build
 
 The build is pretty simple. Minify the JS, minify the HTML, zip. There's a bash script that does it all.
