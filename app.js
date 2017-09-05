@@ -25,7 +25,9 @@
 		ACTION_PROMPT = 7,
 		ACTION_SYSTEM = 8,
 		ACTION_TYPING = 9,
-		ACTION_SPEAK  = 10
+		ACTION_SPEAK  = 10,
+		ACTION_SETVAR = 11,
+		ACTION_IFVAR  = 12
 	;
 
 
@@ -41,6 +43,7 @@
 
 		// State
 		SCRIPT = theScript(), // load the script!!
+		PLAYER = {}, // player state vars
 		MESSAGES = [], // messages stack
 
 		// Browser
@@ -156,6 +159,18 @@
 
 		function(text) { // ACTION_SPEAK
 			MESSAGES.push([MESSAGE_US, text]);
+		},
+
+		function(key, val) { // ACTION_SETVAR
+			PLAYER[key] = val;
+		},
+
+		function(key, map) { // ACTION_IFVAR
+			var val = (key in PLAYER) ? PLAYER[key] : null;
+			if(!(val in map)) {
+				return;
+			}
+			return ACTIONS[ACTION_ACTION](map[val]);
 		},
 
 	];

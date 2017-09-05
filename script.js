@@ -2,7 +2,13 @@ function theScript() {
 	return {
 
 
-		main: [ // Act 1: main
+		main: [
+			[ACTION_SETVAR, "qIntel", null],
+			[ACTION_GOTO, "a1"],
+		],
+
+
+		a1: [ // Act 1: main
 			[ACTION_SYSTEM, "— Connecting —"],
 			[ACTION_PAUSE, 900],
 			[ACTION_SYSTEM, "— Connection established —"],
@@ -203,6 +209,7 @@ function theScript() {
 			[ACTION_PROMPT, [["What kind of intel?", "a3ik"], ["And it's worth risking my life for?", "a3ir"]]],
 		],
 		a3ik: [ // Act 3: intel kind
+			[ACTION_SETVAR, "qIntel", true],
 			[ACTION_SPEAK, ["What kind of intel?"]],
 			[ACTION_TYPING, 400, 1200],
 			[ACTION_TEXT, ["Good, you're asking the right questions."]],
@@ -301,7 +308,7 @@ function theScript() {
 			[ACTION_TYPING, 400, 1200],
 			[ACTION_TEXT, ["I already told you"]],
 			[ACTION_TYPING, 400, 2100],
-			[ACTION_TEXT, ["These aliens want to take over the", "world, steal our resources,", "enslave the population."]],
+			[ACTION_TEXT, ["These aliens want to take over the", "planet, steal our resources,", "enslave the population."]],
 			[ACTION_TYPING, 400, 1900],
 			[ACTION_TEXT, ["And you have the intel in your", "head to stop them."]],
 			[ACTION_TYPING, 400, 1500],
@@ -309,11 +316,57 @@ function theScript() {
 			[ACTION_GOTO, "a4b"],
 		],
 
-		a4b: [ // Act 4: Don't give up
+
+		a5: [ // Act 5: Me or the Mission
 			[ACTION_PAUSE, 600],
 			[ACTION_SPEAK, ["Before I die you mean."]],
 			[ACTION_TYPING, 400, 1500],
 			[ACTION_TEXT, ["We're not giving up on you yet."]],
+			[ACTION_PAUSE, 400],
+			[ACTION_PROMPT, [["Save the intel", "a5i"], ["Save me first", "a5m"]]],
+		],
+		a5i: [ // Act 5: Save intel
+			[ACTION_SPEAK, ["Save the intel"]],
+			[ACTION_PAUSE, 800],
+			[ACTION_SPEAK, ["If it can save the human race,", "it's more important than me."]],
+			[ACTION_TYPING, 400, 1200],
+			[ACTION_TEXT, ["Good man."]],
+			[ACTION_TYPING, 400, 1800],
+			[ACTION_TEXT, ["That's what we like to see,", "putting others before yourself."]],
+			[ACTION_PAUSE, 400],
+			[ACTION_PROMPT, [["What's the risk?", "a5r"], ["What's the intel?", "a5ii"]]],
+		],
+		a5m: [ // Act 5: Save me
+			[ACTION_SPEAK, ["Save me first!"]],
+			[ACTION_PAUSE, 800],
+			[ACTION_SPEAK, ["If I die you're getting nothing."]],
+			[ACTION_TYPING, 400, 1200],
+			[ACTION_TEXT, ["We're doing everything we can."]],
+			[ACTION_TYPING, 400, 1900],
+			[ACTION_TEXT, ["But if something goes wrong..."]],
+			[ACTION_PAUSE, 400],
+			[ACTION_PROMPT, [["What's the risk?", "a5r"], ["What's the intel?", "a5ii"]]],
+		],
+		a5r: [ // Act 5: Whats the risk
+			[ACTION_SPEAK, ["What's the risk?"]],
+			[ACTION_TYPING, 400, 1200],
+			[ACTION_TEXT, ["Not gonna lie."]],
+			[ACTION_TYPING, 400, 1900],
+			[ACTION_TEXT, ["You might not make it through but", "we're trying everything we can."]],
+		],
+		a5ii: [ // Act 5: What's the intel
+			[ACTION_SPEAK, ["What's the intel?"]],
+			[ACTION_TYPING, 400, 1500],
+			[ACTION_IFVAR, "qIntel", {
+				true: [ACTION_TEXT, ["You asked about the intel before."]],
+				null: [ACTION_TEXT, ["So now you're interested in the intel."]],
+			}],
+			[ACTION_TYPING, 400, 1800],
+			[ACTION_TEXT, ["You have the launch codes."]],
+			[ACTION_PAUSE, 600],
+			[ACTION_SPEAK, ["For?"]],
+			[ACTION_TYPING, 400, 1300],
+			[ACTION_TEXT, ["Everything."]],
 		],
 
 
