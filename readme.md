@@ -4,7 +4,7 @@ This is my entry to the 2017 [JS13K](http://js13kgames.com/) competition. It's a
 
 [Play It Online](https://cdn.rawgit.com/Dachande663/js13k-2017-lost/master/index.html)
 
-![alt text](screenshot-large.jpg "Screenshot of game")
+![alt text](screenshots/large.jpg "Screenshot of game")
 
 
 ## Overview
