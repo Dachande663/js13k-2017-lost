@@ -351,8 +351,11 @@ function theScript() {
 			[ACTION_SPEAK, ["What's the risk?"]],
 			[ACTION_TYPING, 400, 1200],
 			[ACTION_TEXT, ["Not gonna lie."]],
-			[ACTION_TYPING, 400, 1900],
+			[ACTION_TYPING, 400, 2400],
 			[ACTION_TEXT, ["You might not make it through but", "we're trying everything we can."]],
+			[ACTION_TYPING, 400, 1800],
+			[ACTION_TEXT, ["And it's not as risky as what", "you were doing to get into", "this situation!"]],
+			[ACTION_GOTO, "a5e"],
 		],
 		a5ii: [ // Act 5: What's the intel
 			[ACTION_SPEAK, ["What's the intel?"]],
@@ -362,12 +365,30 @@ function theScript() {
 				null: [ACTION_TEXT, ["So now you're interested in the intel."]],
 			}],
 			[ACTION_TYPING, 400, 1800],
-			[ACTION_TEXT, ["You have the launch codes."]],
-			[ACTION_PAUSE, 600],
-			[ACTION_SPEAK, ["For?"]],
-			[ACTION_TYPING, 400, 1300],
-			[ACTION_TEXT, ["Everything."]],
+			[ACTION_TEXT, ["It's probably best to say how you got here..."]],
+			[ACTION_GOTO, "a5e"],
 		],
+		a5e: [ // Act 5: Explanation
+			[ACTION_TYPING, 400, 1400],
+			[ACTION_TEXT, ["You were a pilot."]],
+			[ACTION_TYPING, 400, 1900],
+			[ACTION_TEXT, ["Are a pilot.", "Are."]],
+			[ACTION_TYPING, 400, 2400],
+			[ACTION_TEXT, ["You were supposed to fly into the alien", "mothership and launch a nuke."]],
+			[ACTION_PAUSE, 1500],
+			[ACTION_SPEAK, ["Yeah, I've seen this movie before..."]],
+			[ACTION_TYPING, 400, 2100],
+			[ACTION_TEXT, ["Anyway, it all went wrong."]],
+			[ACTION_PAUSE, 1700],
+			[ACTION_PROMPT, [["Of course it did!", "a5eo"], ["How did it go wrong?", "a5ew"]]],
+		],
+		a5eo: [ // Act 5: Explanation course
+			[ACTION_SPEAK, ["Of course it all went wrong!"]],
+		],
+		a5ew: [ // Act 5: Explanation course
+			[ACTION_SPEAK, ["How did it go wrong?"]],
+		],
+
 
 
 
