@@ -2,7 +2,7 @@ function theScript() {
 	return {
 
 
-		main: [
+		main: [ // Init
 			[ACTION_SETVAR, "qIntel", null],
 			[ACTION_GOTO, "a1"],
 		],
@@ -383,11 +383,65 @@ function theScript() {
 			[ACTION_PROMPT, [["Of course it did!", "a5eo"], ["How did it go wrong?", "a5ew"]]],
 		],
 		a5eo: [ // Act 5: Explanation course
-			[ACTION_SPEAK, ["Of course it all went wrong!"]],
+			[ACTION_SPEAK, ["Of course it went wrong!"]],
+			[ACTION_PAUSE, 800],
+			[ACTION_SPEAK, ["It always goes wrong!"]],
+			[ACTION_TYPING, 400, 1700],
+			[ACTION_TEXT, ["It was your plan."]],
+			[ACTION_TYPING, 400, 2400],
+			[ACTION_TEXT, ["Fly the plane up there, launch", "the nuke, and then fly", "out before it blew."]],
+			[ACTION_TYPING, 400, 2400],
+			[ACTION_TEXT, ["Only you lost the nuke."]],
+			[ACTION_GOTO, "a6"],
 		],
 		a5ew: [ // Act 5: Explanation course
 			[ACTION_SPEAK, ["How did it go wrong?"]],
+			[ACTION_TYPING, 400, 1500],
+			[ACTION_TEXT, ["You kind of... lost the nuke."]],
+			[ACTION_GOTO, "a6"],
 		],
+
+
+		a6: [ // Act 6: The Nuke
+			[ACTION_PAUSE, 800],
+			[ACTION_PROMPT, [["How do you lose a nuke?!", "a6h"], ["Where did I lose it?", "a6w"]]],
+		],
+		a6h: [ // Act 5: Nuke lost how
+			[ACTION_SPEAK, ["How do you lose a nuke?!"]],
+			[ACTION_TYPING, 400, 1800],
+			[ACTION_TEXT, ["You get shot at."]],
+			[ACTION_TYPING, 400, 2200],
+			[ACTION_TEXT, ["You had to abort and eject. We think", "the nuke broke free during the fall."]],
+			[ACTION_GOTO, "a6l"],
+		],
+		a6w: [ // Act 5: Nuke where
+			[ACTION_SPEAK, ["Where did I lose it?"]],
+			[ACTION_TYPING, 400, 1900],
+			[ACTION_TEXT, ["That's the thing."]],
+			[ACTION_TYPING, 400, 1400],
+			[ACTION_TEXT, ["We don't know."]],
+			[ACTION_TYPING, 400, 2400],
+			[ACTION_TEXT, ["You were shot down on approach and", "had to eject. We think the nuke", "broke free during the fall."]],
+			[ACTION_GOTO, "a6l"],
+		],
+		a6l: [ // Act 6: Missing, one nuke
+			[ACTION_PAUSE, 2800],
+			[ACTION_SPEAK, ["So where is it now?"]],
+			[ACTION_TYPING, 400, 1800],
+			[ACTION_TEXT, ["Lost."]],
+			[ACTION_PAUSE, 1200],
+			[ACTION_SPEAK, ["Lost?"]],
+			[ACTION_TYPING, 400, 1100],
+			[ACTION_TEXT, ["Lost."]],
+		],
+
+
+
+
+
+
+
+
 
 
 
