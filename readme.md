@@ -1,4 +1,4 @@
-# Untitled Game
+# Lost Time
 
 This is my entry to the 2017 [JS13K](http://js13kgames.com/) competition. It's a Choose Your Own Adventure (CYOA) game written in less than 13 KB. It's also my first game and first canvas app.
 
