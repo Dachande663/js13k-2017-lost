@@ -303,7 +303,7 @@ function theScript() {
 			[ACTION_TEXT, ["You have some very valuable intel in your head."]],
 			[ACTION_TYPING, 400, 1500],
 			[ACTION_TEXT, ["And we need to get it out."]],
-			[ACTION_GOTO, "a4b"],
+			[ACTION_GOTO, "a5"],
 		],
 		a4ai: [ // Act 4: Player importance?
 			[ACTION_SPEAK, ["So...", "Why am I so important?"]],
@@ -315,7 +315,7 @@ function theScript() {
 			[ACTION_TEXT, ["And you have the intel in your", "head to stop them."]],
 			[ACTION_TYPING, 400, 1500],
 			[ACTION_TEXT, ["So we need to get it out."]],
-			[ACTION_GOTO, "a4b"],
+			[ACTION_GOTO, "a5"],
 		],
 
 
