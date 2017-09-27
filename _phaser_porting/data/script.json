@@ -1,0 +1,598 @@
+{
+    "main": [
+        ["ACTION_SETVAR", "qIntel", null],
+        ["ACTION_SETVAR", "untrust1", null],
+        ["ACTION_SETVAR", "untrust2", null],
+        ["ACTION_GOTO", "a1"]
+    ],
+
+    "a1": [
+        ["ACTION_SYSTEM", {"en": "— Connecting —", "es": "- Conectando -"}],
+        ["ACTION_PAUSE", 900],
+        ["ACTION_SYSTEM", {"en": "— Connection established —", "es": "- Conexión establecida -"}],
+        ["ACTION_TYPING", 1600, 900],
+        ["ACTION_TEXT", {"en": ["Hi"], "es": ["Hola"]}],
+        ["ACTION_TYPING", 400, 1700],
+        ["ACTION_TEXT", {"en": ["I know this must be confusing for you..."], "es": ["Supongo que esto será confuso para ti..."]}],
+        ["ACTION_TYPING", 400, 1300],
+        ["ACTION_TEXT", {"en": ["Just, don't panic. Okay?"], "es": ["No entres en pánico, ¿vale?"]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_PROMPT", {"en": [["Who are you?", "a1u"], ["Where am I?", "a1is"]], "es": [["¿Quién eres tú?", "a1u"], ["¿Dónde estoy?", "a1is"]]}]
+    ],
+
+    "a1u": [
+        ["ACTION_SPEAK", {"en": ["Who are you?"], "es": ["¿Quién eres tú?"]}],
+        ["ACTION_TYPING", 400, 1700],
+        ["ACTION_TEXT", {"en": ["I'm your P.A.L."], "es": ["Soy tu C.O.L.E.G.A."]}],
+        ["ACTION_PAUSE", 800],
+        ["ACTION_SPEAK", {"en": ["P.A.L.?"], "es": ["¿C.O.L.E.G.A.?"]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["Primary Access Link"], "es": ["Conexión Orgánico-Lógica Extendida Gestora de Acceso"]}],
+        ["ACTION_TYPING", 400, 1700],
+        ["ACTION_TEXT", {"en": ["Yeah, I know.", "It sucks."], "es": ["Ya lo sé.", "Da asco."]}],
+        ["ACTION_TYPING", 400, 1400],
+        ["ACTION_TEXT", {"en": ["Just call me Pal."], "es": ["Llámame Colega y listo"]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_PROMPT", {"en": [["Hi Pal.", "a1u2"], ["Where am I Pal?", "a1i"]], "es": [["Hola, Colega.", "a1u2"], ["¿Dónde estoy, Colega?", "a1i"]]}]
+    ],
+
+    "a1u2": [
+        ["ACTION_SPEAK", {"en": ["Hi Pal."], "es": ["Hola, Colega."]}],
+        ["ACTION_TYPING", 400, 1700],
+        ["ACTION_TEXT", {"en": ["Well hi to you to! Good to", "see you're taking this so well", "given where you are."], "es": ["¡Ey, saludos! Qué bien", "que te lo tomes así,", "dada tu situación."]}],
+        ["ACTION_GOTO", "a1i"]
+    ],
+
+    "a1is": [
+        ["ACTION_SPEAK", {"en": ["Where am I?"], "es": ["¿Dónde estoy?"]}],
+        ["ACTION_TYPING", 400, 1700],
+        ["ACTION_TEXT", {"en": ["What, no hello?", "No, hi, nice to meet you?"], "es": ["¿Cómo? ¿No hay saludo?", "Pues no. Hola, encantado de conocerte."]}],
+        ["ACTION_TYPING", 400, 1500],
+        ["ACTION_TEXT", {"en": ["I'm P.A.L. by the way."], "es": ["Soy C.O.L.E.G.A, todo sea dicho."]}],
+        ["ACTION_TYPING", 400, 1900],
+        ["ACTION_TEXT", {"en": ["It stands for Primary Access", "Link, but I guess you don't", "care about that either."], "es": ["Significa Conexión Orgánico-Lógica", "Extendida Gestora de Acceso, aunque imagino", "que te da igual."]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_GOTO", "a1i"]
+    ],
+
+    "a1i": [
+        ["ACTION_SPEAK", {"en": ["Where am I Pal?"], "es": ["¿Dónde estoy, Colega?"]}],
+        ["ACTION_TYPING", 400, 1700],
+        ["ACTION_TEXT", {"en": ["You're safe."], "es": ["Estás a salvo."]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_PROMPT", {"en": [["That's reassuring.", "a1ir"], ["That's not what I asked!", "a1ia"]], "es": [["Resulta confortante.", "a1ir"], ["¡No es lo que he preguntado!", "a1ia"]]}]
+    ],
+
+    "a1ir": [
+        ["ACTION_SPEAK", {"en": ["Well that's reassuring."], "es": ["Es reconfortante."]}],
+        ["ACTION_TYPING", 400, 1100],
+        ["ACTION_TEXT", {"en": ["Phew!"], "es": ["¡Buff!"]}],
+        ["ACTION_TYPING", 400, 1700],
+        ["ACTION_TEXT", {"en": ["The last guy flipped.", "You seem much calmer!"], "es": ["El último tipo alucinó.", "¡Tú eres mucho más tranquilo!"]}],
+        ["ACTION_GOTO", "a2"]
+    ],
+    "a1ia": [
+        ["ACTION_SPEAK", {"en": ["That's not what I asked!"], "es": ["¡No es lo que he preguntado!"]}],
+        ["ACTION_TYPING", 400, 1100],
+        ["ACTION_TEXT", {"en": ["Hey hey!"], "es": ["¡Eh, un momento...!"]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["Calm down, okay?", "I'm trying to explain this", "slowly for you."], "es": ["Tranquilízate, ¿de acuerdo?", "Intentaré explicarlo despacio", "para que lo entiendas."]}],
+        ["ACTION_GOTO", "a2"]
+    ],
+
+    "a2": [
+        ["ACTION_TYPING", 400, 1600],
+        ["ACTION_TEXT", {"en": ["This is going to be a shock but..."], "es": ["Para ti será un sobresalto, pero..."]}],
+        ["ACTION_SYSTEM", {"en": "— Connection lost, retrying... —", "es": "- Conexión perdida, reintentando..."}],
+        ["ACTION_PAUSE", 1500],
+        ["ACTION_SYSTEM", {"en": "— Connected —", "es": "- Conectado -"}],
+        ["ACTION_TYPING", 1600, 900],
+        ["ACTION_TEXT", {"en": ["Huh"], "es": ["Err..."]}],
+        ["ACTION_TYPING", 1600, 1800],
+        ["ACTION_TEXT", {"en": ["That shouldn't happen"], "es": ["Eso no tendría que pasar"]}],
+        ["ACTION_TYPING", 1600, 1500],
+        ["ACTION_TEXT", {"en": ["How are you feeling?"], "es": ["¿Cómo te encuentras?"]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_PROMPT", {"en": [["I'm confused", "a2c"], ["I'm angry", "a2a"], ["I'm lost", "a2l"]], "es": [["Estoy confundido", "a2c"], ["Estoy cabreado", "a2a"], ["Me siento perdido", "a2l"]]}]
+    ],
+    "a2c": [
+        ["ACTION_SPEAK", {"en": ["I'm a bit confused. What's", "going on?"], "es": ["Estoy algo confuso. ¿Qué narices", "está pasando?"]}],
+        ["ACTION_TYPING", 400, 1100],
+        ["ACTION_TEXT", {"en": ["Let's start at the beginning."], "es": ["Empecemos por el principio."]}],
+        ["ACTION_GOTO", "a2e"]
+    ],
+    "a2a": [
+        ["ACTION_SPEAK", {"en": ["Just tell me what's going on already!"], "es": ["¡Dime lo que pasa de una vez!"]}],
+        ["ACTION_TYPING", 400, 1100],
+        ["ACTION_TEXT", {"en": ["It's not that simple."], "es": ["No es tan sencillo."]}],
+        ["ACTION_TYPING", 400, 1100],
+        ["ACTION_TEXT", {"en": ["How about we start at the beginning."], "es": ["Voy a empezar por el principio."]}],
+        ["ACTION_GOTO", "a2e"]
+    ],
+    "a2l": [
+        ["ACTION_SPEAK", {"en": ["I'm lost. Where am I Pal?", "Why am I here?"], "es": ["No entiendo nada. ¿Dónde estoy, Colega?", "¿Por qué estoy aquí?"]}],
+        ["ACTION_TYPING", 400, 1100],
+        ["ACTION_TEXT", {"en": ["I know it's scary, but bear with", "me. Let's start at the beginning yeah?"], "es": ["Sé que da miedo, ten paciencia conmigo.", "Empecemos por el principio, ¿vale?"]}],
+        ["ACTION_GOTO", "a2e"]
+    ],
+
+    "a2e": [
+        ["ACTION_TYPING", 400, 1100],
+        ["ACTION_TEXT", {"en": ["What's the last thing you remember?"], "es": ["¿Qué es lo último que recuerdas?"]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_PROMPT", {"en": [["The light", "a2el"], ["The sound", "a2es"], ["The pain", "a2ep"]], "es": [["La luz", "a2el"], ["El sonido", "a2es"], ["El dolor", "a2ep"]]}]
+    ],
+    "a2el": [
+        ["ACTION_SPEAK", {"en": ["I remember a blinding light.", "It was so close, I couldn't", "see anything else."], "es": ["Recuerdo una luz cegadora.", "Tan cercana que no era capaz", "de ver otra cosa."]}],
+        ["ACTION_GOTO", "a2e2"]
+    ],
+    "a2es": [
+        ["ACTION_SPEAK", {"en": ["I remember a sound.", "Like a bomb going off", "right next to my ear."], "es": ["Recuerdo un sonido.", "Como una bomba estallando", "justo a mi lado."]}],
+        ["ACTION_GOTO", "a2e2"]
+    ],
+    "a2ep": [
+        ["ACTION_SPEAK", {"en": ["I remember the pain.", "Felt like I was hit by a", "dump truck right in the chest!"], "es": ["Recuerdo el dolor.", "¡Como si un camión de la basura", "me cayera sobre el pecho!"]}],
+        ["ACTION_GOTO", "a2e2"]
+    ],
+    "a2e2": [
+        ["ACTION_TYPING", 400, 1900],
+        ["ACTION_TEXT", {"en": ["That's good.", "Well not good, but at least", "you remember something."], "es": ["Eso está bien.", "Vamos, no está bien,", "aunque al menos recuerdas algo."]}],
+        ["ACTION_TYPING", 400, 1500],
+        ["ACTION_TEXT", {"en": ["It will make this easier."], "es": ["Hará esto más fácil."]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_SPEAK", {"en": ["???"], "es": ["¿¿??"]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["You're dead"], "es": ["Estás muerto"]}],
+        ["ACTION_SYSTEM", {"en": "— Connection lost, retrying... —", "es": "- Conexión perdida, reintentando... -"}],
+        ["ACTION_PAUSE", 1500],
+        ["ACTION_SYSTEM", {"en": "— Retry failed, retrying #2... —", "es": "- Reintendo fallido, reintento #2... -"}],
+        ["ACTION_PAUSE", 1800],
+        ["ACTION_SYSTEM", {"en": "— Connected —", "es": "- Conectado -"}],
+        ["ACTION_TYPING", 1600, 900],
+        ["ACTION_TEXT", {"en": ["Great timing techs. Really great."], "es": ["Muy oportunos los técnicos. Justo a tiempo."]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_SPEAK", {"en": ["I'm dead?!"], "es": ["¡¿Estoy muerto?!"]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["Yes, but don't panic, remember?"], "es": ["Sí, pero no debes entrar en pánico, ¿recuerdas?"]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_PROMPT", {"en": [["I'm dead!", "a2e2d"], ["I'm scared!", "a2e2s"]], "es": [["¡Estoy muerto!", "a2e2d"], ["¡Estoy aterrorizado!", "a2e2s"]]}]
+    ],
+    "a2e2d": [
+        ["ACTION_SPEAK", {"en": ["I'm dead! How am I not", "supposed to panic?!"], "es": ["¡Estoy muerto! ¡¿Cómo se supone que", "tengo que mantener la calma?!"]}],
+        ["ACTION_TYPING", 400, 1700],
+        ["ACTION_TEXT", {"en": ["Because we haven't lost you yet."], "es": ["Porque todavía no te hemos perdido."]}],
+        ["ACTION_GOTO", "a3"]
+    ],
+    "a2e2s": [
+        ["ACTION_SPEAK", {"en": ["I'm scared Pal. I don't", "feel like I'm dead."], "es": ["Estoy cagado de miedo, Colega.", "No me da la impresión de estar muerto."]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["That's good.", "Stick with that."], "es": ["Eso es bueno.", "Aférrate a eso."]}],
+        ["ACTION_TYPING", 400, 1700],
+        ["ACTION_TEXT", {"en": ["Because we haven't lost you yet."], "es": ["Porque aún no te hemos perdido."]}],
+        ["ACTION_GOTO", "a3"]
+    ],
+
+    "a3": [
+        ["ACTION_TYPING", 400, 1100],
+        ["ACTION_TEXT", {"en": ["You were hurt.", "Your heart has stopped."], "es": ["Has sufrido heridas.", "Tu corazón se ha detenido."]}],
+        ["ACTION_TYPING", 400, 1900],
+        ["ACTION_TEXT", {"en": ["We're trying to save you, but", "we need to talk to you first."], "es": ["Estamos tratando de reanimarte, pero", "necesitamos hablar contigo antes."]}],
+        ["ACTION_PAUSE", 1500],
+        ["ACTION_SPEAK", {"en": ["Talk to me?"], "es": ["¿Hablar conmigo?"]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_PROMPT", {"en": [["Why so urgent?", "a3u"], ["Save me first!", "a3s"]], "es": [["¿Por qué es tan urgente?", "a3u"], ["¡Salvadme primero, cabrones!", "a3s"]]}]
+    ],
+    "a3u": [
+        ["ACTION_SPEAK", {"en": ["What could be more urgent", "than saving my life?"], "es": ["¿Qué puede ser más urgente", "que salvar mi vida?"]}],
+        ["ACTION_TYPING", 400, 1600],
+        ["ACTION_TEXT", {"en": ["You have some intel..."], "es": ["Dispones de cierta información..."]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["And we need to make sure it gets", "to the right people as soon", "as possible."], "es": ["Necesitamos asegurarnos de que", "ésta llega a las manos de la gente adecuada", "lo antes posible."]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_PROMPT", {"en": [["What kind of intel?", "a3ik"], ["And it's worth risking my life for?", "a3ir"]], "es": [["¿Qué clase de información?", "a3ik"], ["¿Acaso vale más que mi vida?", "a3ir"]]}]
+    ],
+    "a3s": [
+        ["ACTION_SPEAK", {"en": ["How about you save me first yeah?"], "es": ["¿Y qué tal si me salváis primero, eh?"]}],
+        ["ACTION_TYPING", 400, 1200],
+        ["ACTION_TEXT", {"en": ["We're trying!"], "es": ["¡Lo estamos intentando!"]}],
+        ["ACTION_TYPING", 400, 1000],
+        ["ACTION_TEXT", {"en": ["We're doing everything we can."], "es": ["Hacemos todo lo que está en nuestras manos."]}],
+        ["ACTION_TYPING", 400, 1600],
+        ["ACTION_TEXT", {"en": ["But you have some intel..."], "es": ["Sin embargo, dispones de cierta información..."]}],
+        ["ACTION_TYPING", 400, 2000],
+        ["ACTION_TEXT", {"en": ["And we need to make sure it gets", "to the right people as soon", "as possible."], "es": ["Y necesitamos asegurarnos de que", "ésta llega a las manos de la gente adecuada", "lo antes posible."]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_PROMPT", {"en": [["What kind of intel?", "a3ik"], ["And it's worth risking my life for?", "a3ir"]], "es": [["¿Qué clase de información?", "a3ik"], ["¿Vale más que mi vida, acaso?", "a3ir"]]}]
+    ],
+    "a3ik": [
+        ["ACTION_SETVAR", "qIntel", true],
+        ["ACTION_SPEAK", {"en": ["What kind of intel?"], "es": ["¿Qué clase de información?"]}],
+        ["ACTION_TYPING", 400, 1200],
+        ["ACTION_TEXT", {"en": ["Good, you're asking the right questions."], "es": ["Bien, ahora haces las preguntas correctas."]}],
+        ["ACTION_GOTO", "a3i2"]
+    ],
+    "a3ir": [
+        ["ACTION_SPEAK", {"en": ["And it's worth risking my life for?"], "es": ["¿Merece la pena arriesgar mi vida por ella?"]}],
+        ["ACTION_TYPING", 400, 1200],
+        ["ACTION_TEXT", {"en": ["From what I've been told, yeah."], "es": ["Hasta donde yo sé... sí."]}],
+        ["ACTION_PAUSE", 700],
+        ["ACTION_SPEAK", {"en": ["'From what you've been told?'", "You don't even know what it is?"], "es": ["'¿Hasta donde sabes?'", "¿Ni siquiera sabes lo que es?"]}],
+        ["ACTION_GOTO", "a3i2"]
+    ],
+
+    "a3i2": [
+        ["ACTION_TYPING", 400, 1700],
+        ["ACTION_TEXT", {"en": ["It's intel vital to the war effort."], "es": ["Es información vital para ganar la guerra."]}],
+        ["ACTION_TYPING", 400, 1200],
+        ["ACTION_TEXT", {"en": ["We can't let it get into the wrong hands."], "es": ["No puede caer en malas manos."]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_PROMPT", {"en": [["The war?", "a3i2w"], ["The wrong hands?", "a3i2e"]], "es": [["¿La guerra?", "a3i2w"], ["¿Malas manos?", "a3i2e"]]}]
+    ],
+    "a3i2w": [
+        ["ACTION_SPEAK", {"en": ["Wait, there's a war going on?"], "es": ["¿Cómo? ¿Que hay una guerra?"]}],
+        ["ACTION_TYPING", 400, 1000],
+        ["ACTION_TEXT", {"en": ["Oh boy"], "es": ["Buff, macho..."]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["Yes. We are at war. Now, don't", "freak out at this next part okay?"], "es": ["Sí. Estamos en guerra. Y ahora...", "no te acojones con lo que voy a decir, ¿vale?"]}],
+        ["ACTION_GOTO", "a4"]
+    ],
+    "a3i2e": [
+        ["ACTION_SPEAK", {"en": ["Who the hell are we fighting against?"], "es": ["¿Contra quién leches estamos luchando?"]}],
+        ["ACTION_TYPING", 400, 1400],
+        ["ACTION_TEXT", {"en": ["This is going to be a shock."], "es": ["Esto te va a dejar flipando."]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["And I don't want you to freak out, okay?"], "es": ["Pero no quiero que te acojones, ¿vale?"]}],
+        ["ACTION_GOTO", "a4"]
+    ],
+
+    "a4": [
+        ["ACTION_PAUSE", 500],
+        ["ACTION_SPEAK", {"en": ["Freak out?!"], "es": ["¡¿Acojonarme?!"]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["They're aliens."], "es": ["Alienígenas."]}],
+        ["ACTION_GOTO", "a4"],
+        ["ACTION_SYSTEM", {"en": "— Connection lost, retrying... —", "es": "- Conexión perdida, reintentando... -"}],
+        ["ACTION_PAUSE", 1400],
+        ["ACTION_SYSTEM", {"en": "— Retry failed, retrying #2... —", "es": "- Reintento fallido, reintento #2... -"}],
+        ["ACTION_PAUSE", 2200],
+        ["ACTION_SYSTEM", {"en": "— Connected —", "es": "- Conectado -"}],
+        ["ACTION_SYSTEM", {"en": "— Warning: Link Unstable —", "es": "- Advertencia: Conexión inestable -"}],
+        ["ACTION_TYPING", 1600, 900],
+        ["ACTION_TEXT", {"en": ["You need to calm down."], "es": ["Tienes que calmarte."]}],
+        ["ACTION_PAUSE", 900],
+        ["ACTION_PROMPT", {"en": [["Aliens!", "a4a"], ["ALIENS!", "a4aa"]], "es": [["¡Extraterrestres!", "a4a"], ["¡MARCIANOS!", "a4aa"]]}]
+    ],
+    "a4aa": [
+        ["ACTION_SPEAK", {"en": ["Calm down?!"], "es": ["¿Que me tranquilice?"]}],
+        ["ACTION_PAUSE", 900],
+        ["ACTION_SPEAK", {"en": ["CALM DOWN?!"], "es": ["¡¿Que me TRANQUILICE?!"]}],
+        ["ACTION_PAUSE", 1700],
+        ["ACTION_GOTO", "a4a"]
+    ],
+    "a4a": [
+        ["ACTION_SPEAK", {"en": ["You just told me we're at war with aliens!"], "es": ["¡Me acabas de decir que estamos en guerra con los marcianos!"]}],
+        ["ACTION_PAUSE", 1800],
+        ["ACTION_SPEAK", {"en": ["How can I be calm right now?"], "es": ["¿Cómo voy a estar tranquilo?"]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["Because otherwise you'll hurt yourself."], "es": ["Si no te calmas, te harás más daño."]}],
+        ["ACTION_PAUSE", 1100],
+        ["ACTION_SPEAK", {"en": ["You mean more than being dead?"], "es": ["¿Más daño que estar muerto?"]}],
+        ["ACTION_TYPING", 400, 1000],
+        ["ACTION_TEXT", {"en": ["Yes."], "es": ["Sí"]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_SPEAK", {"en": ["Oh."], "es": ["Oh."]}],
+        ["ACTION_PAUSE", 400],
+        ["ACTION_PROMPT", {"en": [["What do they want?", "a4aw"], ["Why am I so important?", "a4ai"]], "es": [["¿Qué es lo que quieren?", "a4aw"], ["¿Por qué soy tan importante?", "a4ai"]]}]
+    ],
+    "a4aw": [
+        ["ACTION_SPEAK", {"en": ["So...", "What do these aliens want?"], "es": ["Entonces...", "¿Qué es lo que quieren los marcianos?"]}],
+        ["ACTION_TYPING", 400, 1200],
+        ["ACTION_TEXT", {"en": ["Oh the usual."], "es": ["Ah, lo típico..."]}],
+        ["ACTION_TYPING", 400, 2100],
+        ["ACTION_TEXT", {"en": ["Take over the world.", "Steal our resources.", "Enslave the population."], "es": ["Conquistar el mundo.", "Robar nuestros recursos.", "Esclavizarnos."]}],
+        ["ACTION_PAUSE", 500],
+        ["ACTION_SPEAK", {"en": ["And me?"], "es": ["¿Y yo qué pinto?"]}],
+        ["ACTION_TYPING", 400, 2100],
+        ["ACTION_TEXT", {"en": ["You have some very valuable intel in your head."], "es": ["Tú tienes información muy valiosa dentro de tu cabeza."]}],
+        ["ACTION_TYPING", 400, 1500],
+        ["ACTION_TEXT", {"en": ["And we need to get it out."], "es": ["Y necesitamos sacarla de ahí."]}],
+        ["ACTION_GOTO", "a5"]
+    ],
+    "a4ai": [
+        ["ACTION_SPEAK", {"en": ["So...", "Why am I so important?"], "es": ["Vamos a ver...", "¿Por qué soy tan importante?"]}],
+        ["ACTION_TYPING", 400, 1200],
+        ["ACTION_TEXT", {"en": ["I already told you"], "es": ["Ya te lo he dicho"]}],
+        ["ACTION_TYPING", 400, 2100],
+        ["ACTION_TEXT", {"en": ["These aliens want to take over the", "planet, steal our resources,", "enslave the population."], "es": ["Los alienígenas quieren conquistar el", "planeta, robar nuestros recursos", "y esclavizarnos."]}],
+        ["ACTION_TYPING", 400, 1900],
+        ["ACTION_TEXT", {"en": ["And you have the intel in your", "head to stop them."], "es": ["Y tú tienes en tu cabeza la información", "necesaria para detenerlos."]}],
+        ["ACTION_TYPING", 400, 1500],
+        ["ACTION_TEXT", {"en": ["So we need to get it out."], "es": ["Necesitamos sacarla de ahí"]}],
+        ["ACTION_GOTO", "a5"]
+    ],
+
+    "a5": [
+        ["ACTION_PAUSE", 600],
+        ["ACTION_SPEAK", {"en": ["Before I die you mean."], "es": ["Antes de que la palme, quieres decir."]}],
+        ["ACTION_TYPING", 400, 1500],
+        ["ACTION_TEXT", {"en": ["We're not giving up on you yet."], "es": ["Todavía no te damos por perdido."]}],
+        ["ACTION_PAUSE", 400],
+        ["ACTION_PROMPT", {"en": [["Save the intel", "a5i"], ["Save me first", "a5m"]], "es": [["Recupera la información", "a5i"], ["Salvadme primero", "a5m"]]}]
+    ],
+    "a5i": [
+        ["ACTION_SPEAK", {"en": ["Save the intel"], "es": ["Recuperad la información"]}],
+        ["ACTION_PAUSE", 800],
+        ["ACTION_SPEAK", {"en": ["If it can save the human race,", "it's more important than me."], "es": ["Si con ello se salva a la humanidad,", "es más importante que yo."]}],
+        ["ACTION_TYPING", 400, 1200],
+        ["ACTION_TEXT", {"en": ["Good man."], "es": ["Vale, tío."]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["That's what we like to see,", "putting others before yourself."], "es": ["Eso es lo que queríamos ver,", "cómo pones el bien común por encima del tuyo propio."]}],
+        ["ACTION_PAUSE", 400],
+        ["ACTION_PROMPT", {"en": [["What's the risk?", "a5r"], ["What's the intel?", "a5ii"]], "es": [["¿Qué riesgo hay?", "a5r"], ["¿Cuál es la información?", "a5ii"]]}]
+    ],
+    "a5m": [
+        ["ACTION_SPEAK", {"en": ["Save me first!"], "es": ["¡Salvadme a mí primero!"]}],
+        ["ACTION_PAUSE", 800],
+        ["ACTION_SPEAK", {"en": ["If I die you're getting nothing."], "es": ["Si la palmo, os quedáis sin nada."]}],
+        ["ACTION_TYPING", 400, 1200],
+        ["ACTION_TEXT", {"en": ["We're doing everything we can."], "es": ["Hacemos todo lo que podemos."]}],
+        ["ACTION_TYPING", 400, 1900],
+        ["ACTION_TEXT", {"en": ["But if something goes wrong..."], "es": ["Es sólo que... si algo va mal..."]}],
+        ["ACTION_PAUSE", 400],
+        ["ACTION_PROMPT", {"en": [["What's the risk?", "a5r"], ["What's the intel?", "a5ii"]], "es": [["¿Cuánto riesgo hay?", "a5r"], ["¿Cuál es la información?", "a5ii"]]}]
+    ],
+    "a5r": [
+        ["ACTION_SPEAK", {"en": ["What's the risk?"], "es": ["¿Cuál es el riesgo?"]}],
+        ["ACTION_TYPING", 400, 1200],
+        ["ACTION_TEXT", {"en": ["Not gonna lie."], "es": ["No voy a mentir."]}],
+        ["ACTION_TYPING", 400, 2400],
+        ["ACTION_TEXT", {"en": ["You might not make it through but", "we're trying everything we can."], "es": ["Es probable que no sobrevivas, pero", "estamos haciendo todo lo que podemos."]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["And it's not as risky as what", "you were doing to get into", "this situation!"], "es": ["¡Y no es ni la mitad de arriesgado", "que lo que has hecho para", "encontrarte en este estado!"]}],
+        ["ACTION_GOTO", "a5e"]
+    ],
+    "a5ii": [
+        ["ACTION_SPEAK", {"en": ["What's the intel?"], "es": ["¿Cuál es la información?"]}],
+        ["ACTION_TYPING", 400, 1500],
+        ["ACTION_IFVAR", "qIntel", {
+            "true": ["ACTION_TEXT", {"en": ["You asked about the intel before."], "es": ["Ya me has preguntado antes sobre ello."]}],
+            "null": ["ACTION_TEXT", {"en": ["So now you're interested in the intel."], "es": ["Así que ahora te interesa la información."]}]
+        }],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["It's probably best to say how you got here..."], "es": ["Es mejor que te diga cómo has llegado a esta situación."]}],
+        ["ACTION_GOTO", "a5e"]
+    ],
+    "a5e": [
+        ["ACTION_TYPING", 400, 1400],
+        ["ACTION_TEXT", {"en": ["You were a pilot."], "es": ["Eras un piloto."]}],
+        ["ACTION_TYPING", 400, 1900],
+        ["ACTION_TEXT", {"en": ["Are a pilot.", "Are."], "es": ["Eres.", "Eres un piloto."]}],
+        ["ACTION_TYPING", 400, 2400],
+        ["ACTION_TEXT", {"en": ["You were supposed to fly into the alien", "mothership and launch a nuke."], "es": ["Se suponía que ibas a entrar con tu caza dentro de la", "nave nodriza extraterrestre y lanzar una cabeza nuclear."]}],
+        ["ACTION_PAUSE", 1500],
+        ["ACTION_SPEAK", {"en": ["Yeah, I've seen this movie before..."], "es": ["Sí, ya he visto esa película."]}],
+        ["ACTION_TYPING", 400, 2100],
+        ["ACTION_TEXT", {"en": ["Anyway, it all went wrong."], "es": ["En cualquier caso... todo salió como el culo."]}],
+        ["ACTION_PAUSE", 1700],
+        ["ACTION_PROMPT", {"en": [["Of course it did!", "a5eo"], ["How did it go wrong?", "a5ew"]], "es": [["¡No me digas!", "a5eo"], ["¿Qué fue lo que falló?", "a5ew"]]}]
+    ],
+    "a5eo": [
+        ["ACTION_SPEAK", {"en": ["Of course it went wrong!"], "es": ["¡Pues claro que ha ido mal!"]}],
+        ["ACTION_PAUSE", 800],
+        ["ACTION_SPEAK", {"en": ["It always goes wrong!"], "es": ["¡Todo sale mal siempre!"]}],
+        ["ACTION_TYPING", 400, 1700],
+        ["ACTION_TEXT", {"en": ["It was your plan."], "es": ["El plan era tuyo."]}],
+        ["ACTION_TYPING", 400, 2400],
+        ["ACTION_TEXT", {"en": ["Fly the plane up there, launch", "the nuke, and then fly", "out before it blew."], "es": ["Quisiste meter tu caza allí dentro,", "lanzar la cabeza nuclear y pretendías", "salir de allí antes de la explosión."]}],
+        ["ACTION_TYPING", 400, 2400],
+        ["ACTION_TEXT", {"en": ["Only you lost the nuke."], "es": ["Pero perdiste la cabeza nuclear."]}],
+        ["ACTION_GOTO", "a6"]
+    ],
+    "a5ew": [
+        ["ACTION_SPEAK", {"en": ["How did it go wrong?"], "es": ["¿Qué pudo salir mal?"]}],
+        ["ACTION_TYPING", 400, 1500],
+        ["ACTION_TEXT", {"en": ["You kind of... lost the nuke."], "es": ["La verdad es que... perdiste la bomba."]}],
+        ["ACTION_GOTO", "a6"]
+    ],
+
+
+    "a6": [
+        ["ACTION_PAUSE", 800],
+        ["ACTION_PROMPT", [["How do you lose a nuke?!", "a6h"], ["Where did I lose it?", "a6w"]]]
+    ],
+    "a6h": [
+        ["ACTION_SPEAK", {"en": ["How do you lose a nuke?!"], "es": ["¿Cómo extravías una cabeza nuclear?"]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["You get shot at."], "es": ["Cuando caes abatido."]}],
+        ["ACTION_TYPING", 400, 2200],
+        ["ACTION_TEXT", {"en": ["You had to abort and eject. We think", "the nuke broke free during the fall."], "es": ["Te viste forzado a abortar y eyectarte.", "Creemos que la bomba se soltó durante la caída."]}],
+        ["ACTION_GOTO", "a6l"]
+    ],
+    "a6w": [
+        ["ACTION_SPEAK", {"en": ["Where did I lose it?"], "es": ["¿Dónde la extravié?"]}],
+        ["ACTION_TYPING", 400, 1900],
+        ["ACTION_TEXT", {"en": ["That's the thing."], "es": ["Ése es el tema"]}],
+        ["ACTION_TYPING", 400, 1400],
+        ["ACTION_TEXT", {"en": ["We don't know."], "es": ["No lo sabemos."]}],
+        ["ACTION_TYPING", 400, 2400],
+        ["ACTION_TEXT", {"en": ["You were shot down on approach and", "had to eject. We think the nuke", "broke free during the fall."], "es": ["Fuiste abatido en la aproximación y", "tuviste que eyectarte.", "Creemos que la bomba", "se liberó durante la caída."]}],
+        ["ACTION_GOTO", "a6l"]
+    ],
+    "a6l": [
+        ["ACTION_PAUSE", 2800],
+        ["ACTION_SPEAK", {"en": ["So where is it now?"], "es": ["Vale. ¿Dónde está ahora?"]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["Lost."], "es": ["Extraviada."]}],
+        ["ACTION_PAUSE", 1200],
+        ["ACTION_SPEAK", {"en": ["Lost?"], "es": ["¿Perdida?"]}],
+        ["ACTION_TYPING", 400, 1100],
+        ["ACTION_TEXT", {"en": ["Lost."], "es": ["Extraviada."]}],
+        ["ACTION_PAUSE", 1700],
+        ["ACTION_PROMPT", {"en": [["Can't you find it?", "a6lu"], ["How does this intel help?", "a6li"]], "es": [["¿No la encontráis?", "a6lu"], ["¿Y en qué ayuda mi información?", "a6li"]]}]
+    ],
+    "a6lu": [
+        ["ACTION_SPEAK", {"en": ["Can't you find it?"], "es": ["¿No la encontráis?"]}],
+        ["ACTION_TYPING", 400, 1600],
+        ["ACTION_TEXT", {"en": ["Not without the codes."], "es": ["No sin los códigos."]}],
+        ["ACTION_PAUSE", 1100],
+        ["ACTION_SPEAK", {"en": ["But you built the thing surely?!"], "es": ["Pero vosotros la habéis fabricado, ¿no?"]}],
+        ["ACTION_GOTO", "a7"]
+    ],
+    "a6li": [
+        ["ACTION_SPEAK", {"en": ["How does this intel help?"], "es": ["¿Cómo ayuda mi información?"]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["The codes you have will let us locate the nuke."], "es": ["Los códigos que conoces nos ayudarán a localizarla."]}],
+        ["ACTION_PAUSE", 1100],
+        ["ACTION_SPEAK", {"en": ["But you must have the codes surely?!"], "es": ["¿No deberíais tener ya esos códigos?"]}],
+        ["ACTION_GOTO", "a7"]
+    ],
+
+    "a7": [
+        ["ACTION_TYPING", 400, 1900],
+        ["ACTION_TEXT", {"en": ["The team that built the", "nuke is no longer around."], "es": ["Los ingenieros que diseñaron la bomba", "ya no están... disponibles."]}],
+        ["ACTION_PAUSE", 2100],
+        ["ACTION_SPEAK", {"en": ["Redundancies. Backups. Anything?"], "es": ["Archivos. Copias de seguridad. ¿Algo?"]}],
+        ["ACTION_TYPING", 400, 1100],
+        ["ACTION_TEXT", {"en": ["None."], "es": ["Nada."]}],
+        ["ACTION_TYPING", 400, 2200],
+        ["ACTION_TEXT", {"en": ["You have to give us the codes."], "es": ["Tienes que darnos los códigos."]}],
+        ["ACTION_PAUSE", 1400],
+        ["ACTION_PROMPT", {"en": [["Something doesn't feel right...", "a7u"], ["Why are you so desperate...", "a7d"]], "es": [["Algo no me encaja...", "a7u"], ["¿Por qué estáis tan desesperados...?", "a7d"]]}]
+    ],
+    "a7u": [
+        ["ACTION_SETVAR", "untrust1", true],
+        ["ACTION_SPEAK", {"en": ["Something doesn't feel right..."], "es": ["Algo no me encaja..."]}],
+        ["ACTION_TYPING", 400, 1500],
+        ["ACTION_TEXT", {"en": ["We don't have much time."], "es": ["Mira, no tenemos mucho tiempo."]}],
+        ["ACTION_TYPING", 400, 1800],
+        ["ACTION_TEXT", {"en": ["You need to tell us the codes."], "es": ["Tienes que darnos los códigos."]}],
+        ["ACTION_PAUSE", 400],
+        ["ACTION_PROMPT", {"en": [["Okay, let me think.", "a7t"], ["How can I trust you?", "a7q"]], "es": [["Vale, déjame pensar.", "a7t"], ["¿Cómo puedo confiar en vosotros?", "a7q"]]}]
+    ],
+    "a7d": [
+        ["ACTION_SPEAK", {"en": ["Why are you so desperate..."], "es": ["¿Por qué estáis tan desesperados...?"]}],
+        ["ACTION_TYPING", 400, 1600],
+        ["ACTION_TEXT", {"en": ["You don't have much time."], "es": ["No te queda tiempo."]}],
+        ["ACTION_TYPING", 400, 1900],
+        ["ACTION_TEXT", {"en": ["We need to be quick, just in case."], "es": ["Debemos darnos prisa, sólo por si acaso."]}],
+        ["ACTION_PAUSE", 400],
+        ["ACTION_PROMPT", {"en": [["Okay, let me think.", "a7t"], ["How can I trust you?", "a7q"]], "es": [["Vale, déjame pensar.", "a7t"], ["¿Cómo puedo confiar en vosotros?", "a7q"]]}]
+    ],
+    "a7q": [
+        ["ACTION_IFVAR", "untrust1", {
+            "true": ["ACTION_SETVAR", "untrust2", true] 
+        }],
+        ["ACTION_SPEAK", {"en": ["How can I trust you?"], "es": ["¿Cómo puedo confiar en vosotros?"]}],
+        ["ACTION_TYPING", 400, 1400],
+        ["ACTION_TEXT", {"en": ["I told you."], "es": ["Te lo he dicho."]}],
+        ["ACTION_TYPING", 400, 2200],
+        ["ACTION_TEXT", {"en": ["We're trying to save your life."], "es": ["Estamos intentando salvarte."]}],
+        ["ACTION_PAUSE", 400],
+        ["ACTION_IFVAR", "untrust2", {
+            "true": ["ACTION_PROMPT", {"en": [["Okay, let me think.", "a7t"], ["I'm still not sure.", "a7q2"], ["No. Something's wrong.", "a7s"]], "es": [["Vale, déjame pensar.", "a7t"], ["Sigo sin verlo claro.", "a7q2"], ["No. Algo va mal.", "a7s"]]}],
+            "null": ["ACTION_PROMPT", {"en": [["Okay, let me think.", "a7t"], ["I'm still not sure.", "a7q2"]], "es": [["Vale, déjame pensar.", "a7t"], ["Sigo sin verlo claro.", "a7q2"]]}]
+        }]
+    ],
+    "a7t": [
+        ["ACTION_SPEAK", {"en": ["Okay, let me think."], "es": ["Vale, déjame pensar."]}],
+        ["ACTION_TYPING", 400, 1900],
+        ["ACTION_TEXT", {"en": ["Good. Good."], "es": ["Bien. Bien."]}],
+        ["ACTION_TYPING", 400, 1500],
+        ["ACTION_TEXT", {"en": ["You'll help end this war."], "es": ["Tu ayuda dará fin a esta guerra."]}],
+        ["ACTION_TYPING", 400, 2200],
+        ["ACTION_TEXT", {"en": ["Now think, think of the codes."], "es": ["Ahora piensa en los códigos."]}],
+        ["ACTION_GOTO", "a8d"]
+    ],
+    "a7q2": [
+        ["ACTION_SPEAK", {"en": ["I'm still not sure."], "es": ["Sigo sin verlo claro."]}],
+        ["ACTION_TYPING", 400, 2400],
+        ["ACTION_TEXT", {"en": ["Millions of lives hang in the balance."], "es": ["Millones de vidas cuelgan del alero."]}],
+        ["ACTION_TYPING", 400, 2200],
+        ["ACTION_TEXT", {"en": ["You need to help us."], "es": ["Tienes que ayudarnos."]}],
+        ["ACTION_PAUSE", 700],
+        ["ACTION_PROMPT", {"en": [["Okay, let me think.", "a7t"], ["No. Something's wrong.", "a7s"]], "es": [["Vale, déjame pensar.", "a7t"], ["No. Algo va mal.", "a7s"]]}]
+    ],
+    "a7s": [
+        ["ACTION_SPEAK", {"en": ["No. Something's wrong."], "es": ["No, algo va mal."]}],
+        ["ACTION_PAUSE", 400],
+        ["ACTION_SPEAK", {"en": ["Who are you?"], "es": ["¿Quiénes sois?"]}],
+        ["ACTION_TYPING", 400, 1500],
+        ["ACTION_TEXT", {"en": ["I told you."], "es": ["Te lo he dicho."]}],
+        ["ACTION_TYPING", 400, 1900],
+        ["ACTION_TEXT", {"en": ["I'm your PAL."], "es": ["Soy tu COLEGA."]}],
+        ["ACTION_PAUSE", 800],
+        ["ACTION_SPEAK", {"en": ["Bullshit", "I want to know who you really are!"], "es": ["Y una mierda...", "¡Quiero saber quién eres en realidad!"]}],
+        ["ACTION_GOTO", "a8c"]
+    ],
+
+    "a8c": [
+        ["ACTION_TYPING", 400, 1500],
+        ["ACTION_TEXT", {"en": ["Very well."], "es": ["Muy bien."]}],
+        ["ACTION_TYPING", 400, 1900],
+        ["ACTION_TEXT", {"en": ["We are your attackers."], "es": ["Somos el enemigo."]}],
+        ["ACTION_TYPING", 400, 2500],
+        ["ACTION_TEXT", {"en": ["We will have your world.", "We will eliminate your defences.", "And you will help us do so."], "es": ["Nos apoderaremos de tu mundo.", "Eliminaremos vuestras defensas.", "Y tú vas a ayudarnos a hacerlo."]}],
+        ["ACTION_PAUSE", 2100],
+        ["ACTION_SPEAK", {"en": ["You're crazy if you think I'll help you."], "es": ["Estáis locos si creéis que os ayudaré."]}],
+        ["ACTION_TYPING", 400, 2400],
+        ["ACTION_TEXT", {"en": ["Oh but you will."], "es": ["¡Já! Sí que lo harás."]}],
+        ["ACTION_TYPING", 400, 1900],
+        ["ACTION_TEXT", {"en": ["You didn't lose your memory."], "es": ["No has perdido la memoria."]}],
+        ["ACTION_TYPING", 400, 2100],
+        ["ACTION_TEXT", {"en": ["We took it!"], "es": ["¡La hemos borrado!"]}],
+        ["ACTION_TYPING", 400, 2800],
+        ["ACTION_TEXT", {"en": ["And we'll take it again.", "And again.", "Until you finally tell us what we want to know."], "es": ["Y vamos a repetir el proceso.", "Una y otra vez,", "hasta que al final nos digas lo que queremos saber."]}],
+        ["ACTION_PAUSE", 2400],
+        ["ACTION_SPEAK", {"en": ["No."], "es": ["No."]}],
+        ["ACTION_PAUSE", 1400],
+        ["ACTION_SPEAK", {"en": ["I won't let you."], "es": ["No os lo diré."]}],
+        ["ACTION_SYSTEM", {"en": "— Resetting memories —", "es": "- Borrando la memoria -"}],
+        ["ACTION_PAUSE", 1200],
+        ["ACTION_SPEAK", {"en": ["Stop this."], "es": ["Parad esto."]}],
+        ["ACTION_TYPING", 400, 2100],
+        ["ACTION_TEXT", {"en": ["Let's hope next time you're", "more co-operative."], "es": ["Confiemos en que la próxima vez", "seas más cooperativo."]}],
+        ["ACTION_PAUSE", 1200],
+        ["ACTION_SPEAK", {"en": ["Please!"], "es": ["¡Por favor!"]}],
+        ["ACTION_SYSTEM", {"en": "— Restarting PAL —", "es": "- Reiniciando COLEGA -"}],
+        ["ACTION_PAUSE", 400],
+        ["ACTION_GOTO", "main"]
+    ],
+    "a8d": [
+        ["ACTION_SPEAK", {"en": ["I'm trying."], "es": ["Lo estoy intentando."]}],
+        ["ACTION_TYPING", 400, 1500],
+        ["ACTION_TEXT", {"en": ["Good."], "es": ["Bien."]}],
+        ["ACTION_PAUSE", 900],
+        ["ACTION_SYSTEM", {"en": "— Codes received —", "es": "- Códigos recibidos -"}],
+        ["ACTION_TYPING", 400, 1400],
+        ["ACTION_TEXT", {"en": ["Perfect"], "es": ["Perfecto."]}],
+        ["ACTION_TYPING", 400, 2100],
+        ["ACTION_TEXT", {"en": ["Your contribution to the war effort is", "more important than you can imagine."], "es": ["Tu contribución a la guerra", "ha resultado más decisiva de lo que crees."]}],
+        ["ACTION_PAUSE", 700],
+        ["ACTION_SYSTEM", {"en": "— Purging memories —", "es": "- Purgando memoria -"}],
+        ["ACTION_PAUSE", 400],
+        ["ACTION_SPEAK", {"en": ["Wait!", "Stop, please!"], "es": ["¡Esperado!", "¡Deteneos, por favor!"]}],
+        ["ACTION_TYPING", 400, 2100],
+        ["ACTION_TEXT", {"en": ["You've been very helpful."], "es": ["Has sido de mucha ayuda."]}],
+        ["ACTION_PAUSE", 1600],
+        ["ACTION_SPEAK", {"en": ["What are you doing?"], "es": ["¿Qué estáis haciendo?"]}],
+        ["ACTION_TYPING", 400, 2100],
+        ["ACTION_TEXT", {"en": ["Thank you for the codes human."], "es": ["Gracias por los códigos, humano."]}],
+        ["ACTION_TYPING", 400, 2500],
+        ["ACTION_TEXT", {"en": ["But it's time for you to go now."], "es": ["Pero es hora de que te vayas."]}],
+        ["ACTION_PAUSE", 400],
+        ["ACTION_SPEAK", {"en": ["Please..."], "es": ["Por favor..."]}],
+        ["ACTION_SYSTEM", {"en": "— Shutting down —", "es": "- Desconectando -"}],
+        ["ACTION_SYSTEM", {"en": "— Game over —", "es": "- Fin de la partida -"}],
+        ["ACTION_PAUSE", 1400],
+        ["ACTION_PROMPT", {"en": [["Play again?", "main"]], "es": [["¿Quieres jugar otra vez?", "main"]]}]
+    ],
+
+    "debug": [
+        ["ACTION_TYPING", 400, 1500],
+        ["ACTION_PAUSE", 900],
+        ["ACTION_SYSTEM", {"en": "System text", "es": "Texto de prueba"}],
+        ["ACTION_TEXT", {"en": ["Single line of them text"], "es": ["Texto de ellos de una línea"]}],
+        ["ACTION_TEXT", {"en": ["Multi-line 1", "Multi-line 2 longer", "Multi-line 3"], "es": ["Multi-línea 1", "Multi-línea 2 más largo", "Multi-línea 3"]}],
+        ["ACTION_SPEAK", {"en": ["Player speaking"], "es": ["El jugador hablando"]}]
+    ]
+}
