@@ -67,6 +67,7 @@ PAL.Boot.prototype = {
         this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         this.scale.pageAlignHorizontally = true;
         this.scale.pageAlignVertically = true;
+        this.scale.setMinMax(320, 240, 640, 480);
         this.scale.refresh();
         
         this.time.desiredFps = 60;
